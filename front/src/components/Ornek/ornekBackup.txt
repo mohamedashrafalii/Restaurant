@@ -1,0 +1,27 @@
+
+ <Table>
+           <thead>
+             <tr>
+             <th style={{color:"#000"}}>رقم البون</th>
+             <th style={{color:"#000"}}>نوع البون</th>
+               <th style={{color:"#000"}}>رقم المريض</th>
+               <th style={{color:"#000"}}>الفئة</th>
+               <th style={{color:"#000"}}>الرتبة</th>
+               <th style={{color:"#000"}}>اسم المريض</th>
+               <th style={{color:"#000"}}>عدد الاصناف المطلوبة</th>
+               <th style={{color:"#000"}}>عدد الاصناف المدفوعة</th>
+               <th style={{color:"#000"}}>سعر قبل الخصم</th>
+               {/* <th style={{color:"#000"}}>عدد الاصناف المتبقية</th> */}
+               <th style={{color:"#000"}}>سعر التذكرة</th>
+               <th style={{color:"#000"}}>سعر الصنف</th>
+               <th style={{color:"#000"}}>المجموع</th>
+               <th style={{color:"#000"}}>اسم المستخدم</th>
+               <th style={{color:"#000"}}>التاريخ</th>
+               {localStorage.getItem("type") === "admin" &&<th style={{color:"#000"}}>اجراءات</th>}
+             </tr>
+           </thead>
+           <tbody>
+             {/* {ornek} */}
+             <Pagination count={this.state.length} page={this.state.page} value={this.state.page} onChange={(e,value)=>this.handlePageChange(e,value)} />
+           </tbody>
+         </Table>
